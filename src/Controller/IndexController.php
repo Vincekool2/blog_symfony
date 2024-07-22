@@ -14,7 +14,7 @@ class IndexController extends AbstractController
     #[Route('/', name: 'home')]
     public function index()
     {
-        //die() permet ce de mettre fin a la lecture du code
+        //die() met fin a la lecture du code de la fonction
         var_dump("hi");die();
     }
 }
