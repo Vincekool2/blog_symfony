@@ -1,21 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <html lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
-</head>
-<body>
-{% include 'partials/header.html.twig' %}
+{% extends 'base.html.twig' %}
+
+
+{% block metatitle %}
+    Pokemon : Les types de PoKéMoN
+{% endblock %}
+{% block body %}
+    <main>
+        <h1> les types de PoKéMoN</h1>
 {% for category in categories %}
 
         <article>
            <h1> {{ category }}</h1>
         </article>
+
 {% endfor %}
-{% include 'partials/footer.html.twig' %}
-</body>
-</html>
+    </main>
+{% endblock %}
+
 
