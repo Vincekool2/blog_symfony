@@ -1,0 +1,93 @@
+
+@font-face {
+    font-family: 'pokemon';
+    src: url('pokemon/PokemonSolid.ttf');
+}
+
+footer {
+    background-color: lightblue;
+}
+body{
+    background-image: url("https://i.etsystatic.com/29988796/r/il/e48668/3102482850/il_570xN.3102482850_kznq.jpg");
+    background-size: 50px;
+}
+main {
+    background-color: lightcoral;
+}
+
+h1 {
+
+    font-family : pokemon;
+    text-shadow: rgb(0, 0, 255) 3px 0px 0px, rgb(0, 0, 255) 2.83487px 0.981584px 0px, rgb(0, 0, 255) 2.35766px 1.85511px 0px, rgb(0, 0, 255) 1.62091px 2.52441px 0px, rgb(0, 0, 255) 0.705713px 2.91581px 0px, rgb(0, 0, 255) -0.287171px 2.98622px 0px, rgb(0, 0, 255) -1.24844px 2.72789px 0px, rgb(0, 0, 255) -2.07227px 2.16926px 0px, rgb(0, 0, 255) -2.66798px 1.37182px 0px, rgb(0, 0, 255) -2.96998px 0.42336px 0px, rgb(0, 0, 255) -2.94502px -0.571704px 0px, rgb(0, 0, 255) -2.59586px -1.50383px 0px, rgb(0, 0, 255) -1.96093px -2.27041px 0px, rgb(0, 0, 255) -1.11013px -2.78704px 0px, rgb(0, 0, 255) -0.137119px -2.99686px 0px, rgb(0, 0, 255) 0.850987px -2.87677px 0px, rgb(0, 0, 255) 1.74541px -2.43999px 0px, rgb(0, 0, 255) 2.44769px -1.73459px 0px, rgb(0, 0, 255) 2.88051px -0.838247px 0px;
+}
+
+h1:hover {
+    transform: scale(1.1); /* Rotate the h1 element 360 degrees */
+}
+
+p:hover {
+    transform: scale(1.1); /* Rotate the h1 element 360 degrees */
+}
+
+h3 {
+    display: inline-block; /* Required to make transform work properly */
+    transition: transform 0.5s ease; /* Animation duration and easing function */
+    font-size: 3rem; /* Adjust the size as needed */
+    font-family : pokemon;
+    text-shadow: rgb(0, 0, 255) 3px 0px 0px, rgb(0, 0, 255) 2.83487px 0.981584px 0px, rgb(0, 0, 255) 2.35766px 1.85511px 0px, rgb(0, 0, 255) 1.62091px 2.52441px 0px, rgb(0, 0, 255) 0.705713px 2.91581px 0px, rgb(0, 0, 255) -0.287171px 2.98622px 0px, rgb(0, 0, 255) -1.24844px 2.72789px 0px, rgb(0, 0, 255) -2.07227px 2.16926px 0px, rgb(0, 0, 255) -2.66798px 1.37182px 0px, rgb(0, 0, 255) -2.96998px 0.42336px 0px, rgb(0, 0, 255) -2.94502px -0.571704px 0px, rgb(0, 0, 255) -2.59586px -1.50383px 0px, rgb(0, 0, 255) -1.96093px -2.27041px 0px, rgb(0, 0, 255) -1.11013px -2.78704px 0px, rgb(0, 0, 255) -0.137119px -2.99686px 0px, rgb(0, 0, 255) 0.850987px -2.87677px 0px, rgb(0, 0, 255) 1.74541px -2.43999px 0px, rgb(0, 0, 255) 2.44769px -1.73459px 0px, rgb(0, 0, 255) 2.88051px -0.838247px 0px;
+
+
+}
+
+
+p {
+    transition: transform 0.5s ease; /* Animation duration and easing function */
+    font-size: 3rem; /* Adjust the size as needed */
+    font-family : pokemon;
+    text-shadow: rgb(0, 0, 255) 3px 0px 0px, rgb(0, 0, 255) 2.83487px 0.981584px 0px, rgb(0, 0, 255) 2.35766px 1.85511px 0px, rgb(0, 0, 255) 1.62091px 2.52441px 0px, rgb(0, 0, 255) 0.705713px 2.91581px 0px, rgb(0, 0, 255) -0.287171px 2.98622px 0px, rgb(0, 0, 255) -1.24844px 2.72789px 0px, rgb(0, 0, 255) -2.07227px 2.16926px 0px, rgb(0, 0, 255) -2.66798px 1.37182px 0px, rgb(0, 0, 255) -2.96998px 0.42336px 0px, rgb(0, 0, 255) -2.94502px -0.571704px 0px, rgb(0, 0, 255) -2.59586px -1.50383px 0px, rgb(0, 0, 255) -1.96093px -2.27041px 0px, rgb(0, 0, 255) -1.11013px -2.78704px 0px, rgb(0, 0, 255) -0.137119px -2.99686px 0px, rgb(0, 0, 255) 0.850987px -2.87677px 0px, rgb(0, 0, 255) 1.74541px -2.43999px 0px, rgb(0, 0, 255) 2.44769px -1.73459px 0px, rgb(0, 0, 255) 2.88051px -0.838247px 0px;
+
+}
+
+body {
+    cursor: url('tom-s-updated-pointers/normal select.cur'), auto; /* Custom banana cursor */
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ensure to add this CSS to your existing style.css file */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust based on your layout requirements */
+    background-image: url("https://websitering.neocities.org/pkmn/The%20Classic%20Pokemon%20Page!_files/combo.gif ");
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+    text-align: center;
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-s60 {
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    animation: rotate 5s infinite linear;
+    transform-style: preserve-3d;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}

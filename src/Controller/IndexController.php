@@ -15,6 +15,6 @@ class IndexController extends AbstractController
     public function index()
     {
         //die() met fin a la lecture du code de la fonction
-        var_dump("hi");die();
+        return $this->render('view.html.twig');
     }
 }
