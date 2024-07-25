@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block metatitle %}
+ Pokemon : Mes pokémons
+{% endblock %}
+
+
+{% block body %}
+<main>
+{% for pokemon in pokemons %}
+    <article>
+        <a href="{{ path("show_pokemon",{idPokemon: pokemon.id })}}">
+    <h1>{{ pokemon.id }}:{{ pokemon.title }}</h1></a>   
+        <img src="{{ pokemon.img }}" alt="">
+    </article>
+    {% else %}
+    <p>Le pokémon {{ pokemon.id }} est absent</p>
+{% endfor %}
+</main>
+{% endblock %}
+

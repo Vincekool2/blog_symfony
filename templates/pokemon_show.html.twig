@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+
+{% block metatitle %}
+    Pokemon : show
+{% endblock %}
+
+{% block body %}
+    <h1>{{ pokemon.title }}</h1>
+    <img src="{{ pokemon.img }}">
+    <h2>{{ pokemon.content }}</h2>
+{% endblock %}
