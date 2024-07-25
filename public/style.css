@@ -1,68 +1,100 @@
-
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 @font-face {
     font-family: 'pokemon';
     src: url('pokemon/PokemonSolid.ttf');
 }
-*{
-    font-size: 2rem;
-    font-family : pokemon;
-color: yellow;
+@font-face {
+    font-family: 'andy';
+    src: url('Andy-Bold/ANDYB.TTF');
+}
+.andy{
+    font-size: 5rem;
+    color:white;
+    font-family: 'andy';
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #3663AD;
+    display: block;
+}
+.pokefont{
+    font-size: 7rem;
+    font-family: pokemon;
+    color: #FBCF03;
     -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: mediumblue   ;
+    -webkit-text-stroke-color: #3663AD ;
     letter-spacing: 10px;
+    letter-spacing: 16px;
+    display: block;
+}
+.rotate{
+    animation: rotate 5s infinite linear;
+    transform-style: preserve-3d;
+}
+.rotate2 {
+    animation: rotate2 5s infinite linear;
+    transform-style: preserve-3d;
+}
+a {
+    text-decoration: none;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+}
+ul{
+    list-style-type: none ;
+}
+img{
+    width: 300px;
+
 }
 footer {
     background-color: lightblue;
 }
 body{
-    background-image: url("https://i.etsystatic.com/29988796/r/il/e48668/3102482850/il_570xN.3102482850_kznq.jpg");
-    background-size: 50px;
+    background: lightgoldenrodyellow;
 }
 main {
-    background-color: lightcoral;
-}
-
-h1 {
-
-}
-
-h1:hover {
-    transform: scale(1.1);
-}
-
-p:hover {
-    transform: scale(1.1);
-}
-
-h3 {
-    transition: transform 0.5s ease;
-    font-size: 3rem;
-
-}
-
-
-p {
-    transition: transform 0.5s ease; /* Animation duration and easing function */
-    font-size: 3rem; /* Adjust the size as needed */
-}
-
-
-div {
+    background-color: #B0413E;
+    overflow: scroll;
+    height: 56vh;
     display: flex;
     justify-content: center;
 }
-
-/* Ensure to add this CSS to your existing style.css file */
-
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url("https://websitering.neocities.org/pkmn/The%20Classic%20Pokemon%20Page!_files/combo.gif ");
-    background-repeat: no-repeat;
-    background-size: 100% 70%;
+article {
+    background-color: #cccccc;
+    border-radius: 20px;
+    margin: 20px;
     text-align: center;
+}
+nav{
+    background-color: lightgreen;
+}
+li {
+width: 100%;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    transition: all 1s;
+}
+li:hover{
+    background-color: #3b82f6;
+    color: lightgreen;
+    transition: all 1s;
+
+}
+.lol{
+    -webkit-transform: rotate(-90deg);
+}
+section{
+    display: flex;
+    justify-content: center;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
 }
 
 header div {
@@ -71,12 +103,6 @@ header div {
     align-items: center;
 }
 
-.img-s60 {
-    width: 200px;xor
-    height: 200px;
-    animation: rotate 5s infinite linear;
-    transform-style: preserve-3d;
-}
 
 @keyframes rotate {
     from {
@@ -91,4 +117,12 @@ audio {
     height: 0px;
     display: none;
 
+}
+@keyframes rotate2 {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(360deg);
+    }
 }

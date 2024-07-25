@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block metatitle %}
+    Pokemon : Mes pokémons
+{% endblock %}
+
+
+{% block body %}
+    <main>
+        {% for pokemons in pokemon %}
+            <article>
+                <h1>{{ pokemons.title }}</h1>
+                <img src="{{ pokemons.image }}" alt="">
+                <h2>{{ pokemons.description }}</h2>
+                <h2>{{ pokemons.type }}</h2>
+            </article>
+        {% endfor %}
+    </main>
+{% endblock %}

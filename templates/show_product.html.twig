@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+
+{% block metatitle %}
+    consoles de jeux
+{% endblock %}
+
+{% block body %}
+    <main>
+        <article>
+            <article>
+                <h1>{{ product.title }}</h1>
+                <img src="{{ product.image }}">
+                <h2>price:{{ product.price }}€</h2>
+                <h2>réduction:{{ product.price_reduction }}€</h2>
+                {% for cate in product.categories %}
+                    <h2>categorie:{{ cate }}</h2>
+                {% endfor %}
+            </article>
+    </main>
+{% endblock %}

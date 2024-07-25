@@ -5,17 +5,42 @@
         <title>{% block metatitle %}{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         <link rel="stylesheet" href="{{ asset('style.css') }}">
+        <link rel="icon" type="image/x-icon" href="{{ asset('pokeball.png') }}">
     </head>
     <body>
     <header>
-        <img class="img-s60" src="https://www.pokepedia.fr/images/e/e2/Pok%C3%A9_Ball-RS.png" alt="">
-        <h1>PoKéMoN ! ATTRAPEZ LES TOUS !</h1>
-        <nav><ul>
-                <li><a href="{{ path("home") }}">acceuil</a></li>
-                <li><a href="{{ path("cate") }}">categories de pokemons</a></li>
-                <li><a href="{{ path("articles") }}">liste de mes PoKéMoNz </a></li></ul></nav>
-         <audio autoplay controls loop preload src="{{ asset('Pokémon (mp3cut.net).mp3') }}">
-        </audio>
+        <section>
+            <div>
+                <h1 class="pokefont rotate">PoKéMoN</h1>
+                <h1><span class="andy rotate2">Attraper-les tous!</span></h1>
+            </div>
+        </section>
+        <nav>
+
+            <ul class="flex">
+
+                <a href="{{ path("home") }}"><li>Accueil</li></a>
+                <a href="{{ path("cate") }}"><li>Versions</li></a>
+                <a href="{{ path("list_pokemon") }}"><li>Mes PoKéMoNs</li></a>
+            </ul>
+        </nav>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>{#<audio autoplay controls loop preload src="{{ asset('Pokémon (mp3cut.net).mp3') }}">
+        </audio>}#}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </header>
         {% block body %}{% endblock %}
 

@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+
+{% block metatitle %}
+     consoles de jeux
+{% endblock %}
+
+{% block body %}
+    <main>
+    {% for product in products %}
+    <article>
+        <article>
+            <a href="{{ path("show_product",{idProduct: product.id })}}">
+                <h1>{{ product.id }}:{{ product.title }}</h1></a>
+    <img src="{{ product.image }}">
+    <h2>{{ product.price }}</h2>
+    <h2>{{ product.price_reduction }}</h2>
+        {% for cate in product.categories %}
+            <h2>{{ cate }}</h2>
+        {% endfor %}
+    </article>
+        <hr>
+    {% endfor %}
+</main>
+{% endblock %}
