@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Entity\Pokemon;
 use App\Repository\PokemonRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use phpDocumentor\Reflection\Type;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -84,6 +86,21 @@ class PokemonController extends AbstractController
         $entityManager->flush();
         return $this->redirectToRoute('bdd_pokemon');
 
+
+    }
+    #[Route('/insert_pokemon', name: 'insert_pokemon')]
+    public function insertPokemon( PokemonRepository $pokemonRepository, EntityManagerInterface $entityManager )
+    {
+        $pokemon = new Pokemon (
+            'Grotadmorv',
+            'Grotadmorv est un immonde mélange de plusieurs produits toxiques, on peut y apercevoir sa grande langue bleu-gris.',
+            'https://www.pokepedia.fr/images/thumb/8/8f/Grotadmorv-RFVF.png/500px-Grotadmorv-RFVF.png',
+            'Poison',
+    );
+        $entityManager->persist($pokemon);
+        $entityManager->flush();
+
+        return $this->render('insert_pokemon.html.twig');
 
     }
 
