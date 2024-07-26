@@ -30,11 +30,11 @@
     display: block;
 }
 .rotate{
-    animation: rotate 5s infinite linear;
+    animation: rotate 5s infinite ease-in-out;
     transform-style: preserve-3d;
 }
 .rotate2 {
-    animation: rotate2 5s infinite linear;
+    animation: rotate2 5s infinite ease-in-out;
     transform-style: preserve-3d;
 }
 a {
@@ -42,9 +42,11 @@ a {
     font-size: 2rem;
     width: 100%;
     height: 100%;
+    color: #3b82f6;
 }
 ul{
     list-style-type: none ;
+
 }
 img{
     width: 300px;
@@ -64,7 +66,7 @@ main {
     justify-content: center;
 }
 article {
-    background-color: #cccccc;
+    background-color: lightgreen;
     border-radius: 20px;
     margin: 20px;
     text-align: center;
@@ -78,6 +80,7 @@ width: 100%;
     padding: 20px;
     text-align: center;
     transition: all 1s;
+
 }
 li:hover{
     background-color: #3b82f6;
@@ -106,10 +109,19 @@ header div {
 
 @keyframes rotate {
     from {
-        transform: rotateY(0deg);
+        transform: rotateY(0deg) rotateX(0deg);
     }
     to {
-        transform: rotateY(360deg);
+        transform:  rotateX(360deg) rotateY(720deg);
+    }
+}
+
+@keyframes rotate2 {
+    from {
+        transform: rotateX(0deg) rotateY(720deg);
+    }
+    to {
+        transform: rotateX(720deg) rotateY(0deg)    ;
     }
 }
 audio {
@@ -117,12 +129,4 @@ audio {
     height: 0px;
     display: none;
 
-}
-@keyframes rotate2 {
-    from {
-        transform: rotateX(0deg);
-    }
-    to {
-        transform: rotateX(360deg);
-    }
 }

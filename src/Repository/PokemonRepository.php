@@ -16,28 +16,44 @@ class PokemonRepository extends ServiceEntityRepository
         parent::__construct($registry, Pokemon::class);
     }
 
-    //    /**
-    //     * @return Pokemon[] Returns an array of Pokemon objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('p')
-    //            ->andWhere('p.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('p.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+      //  /**
+      //   * @return Pokemon[] Returns an array of Pokemon objects
+      //   */
+       public function findByExampleField($value): array
+        {
+          return $this->createQueryBuilder('p')
+                ->andWhere('p.exampleField = :val')
+                ->setParameter('val', $value)
+                ->orderBy('p.id', 'ASC')
+                ->setMaxResults(10)
+                ->getQuery()
+                ->getResult()
+            ;
+        }
 
-    //    public function findOneBySomeField($value): ?Pokemon
-    //    {
-    //        return $this->createQueryBuilder('p')
-    //            ->andWhere('p.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+    public function findOneBySomeField($value): ?Pokemon
+        {
+            return $this->createQueryBuilder('p')
+                ->andWhere('p.exampleField = :val')
+                ->setParameter('val', $value)
+                ->getQuery()
+                ->getOneOrNullResult()
+           ;
+        }
+    #nom de a fonction
+    public function findOneLike($search)
+    {
+        $queryBuilder = $this->createQueryBuilder('pokemon');
+
+        $query = $queryBuilder->select('pokemon')
+            ->where('pokemon.Title LIKE :search')
+            ->setParameter('search', '%'.$search.'%')
+            ->getQuery();
+
+        $pokemons = $query->getResult();
+
+        return $pokemons;
+    }
+
+
 }

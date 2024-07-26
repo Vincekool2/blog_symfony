@@ -9,7 +9,8 @@
     <main>
         {% for pokemons in pokemon %}
             <article>
-                <h1>{{ pokemons.title }}</h1>
+
+                <a href="{{ path("show_bddpokemon",{idPokemon: pokemons.id }) }}"><h1>{{ pokemons.title }}</h1></a>
                 <img src="{{ pokemons.image }}" alt="">
                 <h2>{{ pokemons.description }}</h2>
                 <h2>{{ pokemons.type }}</h2>
