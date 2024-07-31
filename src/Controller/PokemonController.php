@@ -143,12 +143,12 @@ class PokemonController extends AbstractController
         //fait le lien entre le formulaire et la requête
         $pokemonUpdateForm->handleRequest($request);
 
-        //si le modification a bien été envoyé et que les données sont valides ce "if" commit(persist) puis push(flush).
+        //Si la modification a bien été envoyé et que les données sont valides ce "if" commit(persist) puis push(flush).
         if ($pokemonUpdateForm->isSubmitted() && $pokemonUpdateForm->isValid()) {
             $entityManager->persist($pokemon);
             $entityManager->flush();
         }
-        // je retourne le rendu pour l'affichage twig avec le formulaire
+        //Je retourne le rendu pour l'affichage twig avec le formulaire
         return $this->render('pokemon_update.html.twig', ['pokemon' => $pokemonUpdateForm->createView()]);
     }
 }
