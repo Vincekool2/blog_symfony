@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block metatitle %}
+    Pokemon : update
+{% endblock %}
+
+
+{% block body %}
+    <main>
+        {{ form_start(pokemon) }}
+
+            {{ form_row(pokemon.Title) }}
+            {{ form_row(pokemon.Description) }}
+            {{ form_row(pokemon.image) }}
+            {{ form_row(pokemon.type) }}
+            {{ form_row(pokemon.valider) }}
+
+        {{ form_end(pokemon) }}
+    </main>
+{% endblock %}

@@ -7,6 +7,18 @@
 
 {% block body %}
     <main>
-     <h1>pokemon inserted</h1>
+        <form method="post">
+            <label for="">
+                <input type="text" placeholder="title" name="title">
+                <input type="text" placeholder="description" name="description">
+                <input type="text" placeholder="image" name="image">
+                <input type="text" placeholder="type" name="type">
+                <input type="submit" >
+            </label>
+        </form>
+
+    {%  if pokemon %}
+<h1 class="rainbow_text_animated">{{ pokemon.title }} est maintenant un <span class="pokefont">PoKéMoN</span></h1>
+    {% endif %}
     </main>
 {% endblock %}

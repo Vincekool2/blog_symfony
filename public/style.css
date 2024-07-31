@@ -2,41 +2,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
-@font-face {
-    font-family: 'pokemon';
-    src: url('pokemon/PokemonSolid.ttf');
-}
-@font-face {
-    font-family: 'andy';
-    src: url('Andy-Bold/ANDYB.TTF');
-}
-.andy{
-    font-size: 5rem;
-    color:white;
-    font-family: 'andy';
-    -webkit-text-stroke-width: 5px;
-    -webkit-text-stroke-color: #3663AD;
-    display: block;
-}
-.pokefont{
-    font-size: 7rem;
-    font-family: pokemon;
-    color: #FBCF03;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #3663AD ;
-    letter-spacing: 10px;
-    letter-spacing: 16px;
-    display: block;
-}
-.rotate{
-    animation: rotate 5s infinite ease-in-out;
-    transform-style: preserve-3d;
-}
-.rotate2 {
-    animation: rotate2 5s infinite ease-in-out;
-    transform-style: preserve-3d;
-}
+
 a {
     text-decoration: none;
     font-size: 2rem;
@@ -61,7 +29,7 @@ body{
 main {
     background-color: #B0413E;
     overflow: scroll;
-    height: 56vh;
+    height: 72vh;
     display: flex;
     justify-content: center;
 }
@@ -88,9 +56,6 @@ li:hover{
     transition: all 1s;
 
 }
-.lol{
-    -webkit-transform: rotate(-90deg);
-}
 section{
     display: flex;
     justify-content: center;
@@ -107,26 +72,7 @@ header div {
 }
 
 
-@keyframes rotate {
-    from {
-        transform: rotateY(0deg) rotateX(0deg);
-    }
-    to {
-        transform:  rotateX(360deg) rotateY(720deg);
-    }
-}
-
-@keyframes rotate2 {
-    from {
-        transform: rotateX(0deg) rotateY(720deg);
-    }
-    to {
-        transform: rotateX(720deg) rotateY(0deg)    ;
-    }
-}
-audio {
-    width: 0px;
-    height: 0px;
-    display: none;
-
+input{
+    background-color: blue;
+    color: white;
 }

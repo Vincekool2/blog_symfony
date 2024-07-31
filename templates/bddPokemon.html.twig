@@ -12,8 +12,9 @@
 
                 <a href="{{ path("show_bddpokemon",{idPokemon: pokemons.id }) }}"><h1>{{ pokemons.title }}</h1></a>
                 <img src="{{ pokemons.image }}" alt="">
-                <h2>{{ pokemons.description }}</h2>
-                <h2>{{ pokemons.type }}</h2>
+                <p>{{ pokemons.description }}</p>
+                <br>
+                <h4>type: {{ pokemons.type }}</h4>
             </article>
         {% endfor %}
     </main>
