@@ -130,9 +130,9 @@ class PokemonController extends AbstractController
     #[Route('/pokemons/update/{id}', name: 'pokemon_update')]
     public function pokemonUpdate (PokemonRepository $pokemonRepository, EntityManagerInterface $entityManager, Request $request, int $id)
     {
-        //Selectionne un pokemon dans la bdd avec a l'id dans l'url
+        //Selectionne le pokemon qui correspond à l'id dans l'url
         $pokemon = $pokemonRepository->find($id);
-        //Si l'id n'est pas valide l'utilisateur est redirigé vers un page d'erreur
+        //Si l'id n'est pas valide l'utilisateur est redirigé vers une page d'erreur
         if ($pokemon === null) {
             $html = $this->renderView('404.html.twig');
             return new Response($html, 404);
@@ -143,7 +143,7 @@ class PokemonController extends AbstractController
         //fait le lien entre le formulaire et la requête
         $pokemonUpdateForm->handleRequest($request);
 
-        //si le modification a bien été envoyé et que les donnees sont valides ce if commit(persist) puis push(flush).
+        //si le modification a bien été envoyé et que les données sont valides ce "if" commit(persist) puis push(flush).
         if ($pokemonUpdateForm->isSubmitted() && $pokemonUpdateForm->isValid()) {
             $entityManager->persist($pokemon);
             $entityManager->flush();
